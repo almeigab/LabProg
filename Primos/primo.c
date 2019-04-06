@@ -1,21 +1,21 @@
 #include <stdio.h>
-#define size 10000
+#define size 1000
 
 int main () {
     int p[size];
-    int i = 1;
-    p[0] = 1;
+    p[0] = 2;
     int num = p[0] + 1;
+    int i = 1;
     while (i < size) {
         int primo = 1;
-        for(int j = 1;j < i && primo; j++)
+        for(int j = 0;j < i && primo; j++)
             if (num % p[j] == 0)
                 primo = 0;
         if (primo) {
             p[i] = num;
-            num = p[i] + 1;
             i++;
-        } else num++;
+        }
+        num++;
     }
     for (i = 0; i < size; i++) {
         printf("%4d\t", p[i]);
