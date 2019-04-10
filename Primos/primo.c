@@ -8,7 +8,7 @@ int main () {
     int i = 1;
     while (i < size) {
         int primo = 1;
-        for(int j = 0;j < i && primo; j++)
+        for(int j = 0;j < i && ((p[j]*2) <= num) && primo; j++)
             if (num % p[j] == 0)
                 primo = 0;
         if (primo) {
