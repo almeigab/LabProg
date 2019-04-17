@@ -1,4 +1,0 @@
-CFLAGS=-Wall -g
-all:ex2.1
-clean:
-	rm -f ex2.1
