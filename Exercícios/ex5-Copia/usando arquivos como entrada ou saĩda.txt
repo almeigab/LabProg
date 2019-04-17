@@ -1,0 +1,11 @@
+para exibir conteudo de um arquivo
+./copia < arquivoIn
+
+para inserir conteudo em um arquivo:
+append:
+./copia >> arquivoOut
+overwrite:
+./copia > arquivoOut
+
+para copiar conteudo de um arquivo para outro
+./copia < arquivoIn > arquivoOut
