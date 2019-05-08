@@ -43,9 +43,13 @@ void converteFraseEmChave (char s[], char key[]){
 *******************************/
 void maiuscula (char s[]) {
     int i;
-    for (i = 0; s[i] != '\0'; i++)
-        if (s[i] >= 'a' && s[i]<='z')
+    for (i = 0; s[i] != '\0'; i++) {
+		//remove \n no final
+		if (s[i] == '\n' && s[i+1] == '\0')
+			s[i] = '\0';
+        else if (s[i] >= 'a' && s[i]<='z')
             s[i] += 'A' - 'a';
+		}
 }
 
 /******************************
