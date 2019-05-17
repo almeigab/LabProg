@@ -9,14 +9,19 @@ void validaFrase (char s[]);
 
 int main () {
     char string1[1000];
-    char key[30];
+    
     char string2[1000];
     
+    char key[30];
+    int i;
+    for (i = 0; i < 30; i++)
+       key[i] = 0;
+    
     printf("\nInsira a frase a se tornar chave:\n");
-    fgets(string1,1000,stdin);
+	fgets(string1,1000,stdin);
     
     printf("\nInsira a frase a ser criptografada:\n");
-    fgets(string2,1000,stdin );;
+    fgets(string2,1000,stdin); 
     
     converteFraseEmChave(string1,key);//converte frase em chave
     printf("\nchave:\n%s\n",key);
@@ -49,7 +54,7 @@ void maiuscula (char s[]) {
 			s[i] = '\0';
         else if (s[i] >= 'a' && s[i]<='z')
             s[i] += 'A' - 'a';
-		}
+	}
 }
 
 /******************************
